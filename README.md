@@ -1,23 +1,23 @@
 # Cinema Room REST Service (Kotlin)
 
-Cinema Room REST Service er et web-basert API-prosjekt utviklet i Kotlin med Spring Boot. Prosjektet håndterer billettkjøp, refusjon og visning av kinobilletter, og inkluderer validering av input, tilpasset feilhåndtering og endpoint-statistikk. Prosjektet er designet for å bestå Hyperskills interne tester, og demonstrerer en tydelig separasjon av ansvar mellom kontroller (som håndterer HTTP-forespørsler), forretningslogikk (domene- og serviceklasser) og datatilgang (lagret i en tråd-sikker struktur).
-Designvalg
+Cinema Room REST Service er et API-prosjekt utviklet i Kotlin med Spring Boot. Prosjektet håndterer billettkjøp, refusjon og visning av kinobilletter, og inkluderer validering av input, tilpasset feilhåndtering og endpoint-statistikk. Prosjektet er designet for å bestå Hyperskills interne tester, og demonstrerer blandt annet en tydelig separasjon av ansvar mellom kontroller (som håndterer HTTP-forespørsler), forretningslogikk (domene- og serviceklasser) og datatilgang (lagret i en thread-safe struktur).
+## Designvalg
 
-## Separation of Concerns:
+### Separation of Concerns:
 
   Controller: Håndterer alle HTTP-endepunkter for visning av setekart, kjøp og retur av billetter, samt statistikk.
 
   Domain: Inneholder forretningslogikken og modellene (som Ticket, Cinema og Purchase) som representerer kinoens data.
 
-  Exception Handling: Spesialtilpassede feilmeldinger og unntak (SeatTakenException, WrongPasswordException, WrongTokenException) sørger for en robust API-respons.
+  Exception Handling: Spesialtilpassede feilmeldinger og unntak (SeatTakenException, WrongPasswordException, WrongTokenException) sørger bedre API-responser.
 
-## Validering og feilhåndtering:
+### Validering og feilhåndtering:
 
   Inputvalidering er implementert med Jakarta/Javax Validation for å sikre korrekt dataformat.
 
-  Tilpasset ExceptionHandler gir konsistente feilmeldinger til klientene.
+  Tilpasset ExceptionHandler gir hjelper med å gi feilmeldinger til klientene.
 
-## Tråd-sikkerhet og deling av data:
+### Tråd-sikkerhet og deling av data:
 
   Kinoens data håndteres via en ConcurrentHashMap for å sikre sikker tilgang når flere brukere interagerer med API-et samtidig.
 
