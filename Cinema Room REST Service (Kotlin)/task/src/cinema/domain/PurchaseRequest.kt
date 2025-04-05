@@ -1,7 +1,7 @@
 package cinema.domain
 
-import jakarta.validation.constraints.Max
-import jakarta.validation.constraints.Min
+import javax.validation.constraints.Max
+import javax.validation.constraints.Min
 
 data class PurchaseRequest(
     @field:Min(1)

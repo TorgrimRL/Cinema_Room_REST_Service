@@ -4,7 +4,7 @@ import cinema.domain.*
 import cinema.exception.SeatTakenException
 import cinema.exception.WrongPasswordException
 import cinema.exception.WrongTokenException
-import jakarta.validation.Valid
+import javax.validation.Valid
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping

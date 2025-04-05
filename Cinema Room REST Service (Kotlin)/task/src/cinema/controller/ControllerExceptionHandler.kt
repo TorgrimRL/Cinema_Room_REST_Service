@@ -6,7 +6,6 @@ import cinema.exception.WrongPasswordException
 import cinema.exception.WrongTokenException
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
-import org.springframework.http.HttpStatusCode
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.MethodArgumentNotValidException
 import org.springframework.web.bind.annotation.ControllerAdvice
@@ -29,8 +28,8 @@ class ControllerExceptionHandler : ResponseEntityExceptionHandler() {
     override fun handleMethodArgumentNotValid(
         ex: MethodArgumentNotValidException,
         headers: HttpHeaders,
-        status: HttpStatusCode,
-        request: WebRequest): ResponseEntity<Any>? {
+        status: HttpStatus,
+        request: WebRequest): ResponseEntity<Any> {
 
         val body: MutableMap<String, Any> = LinkedHashMap()
         body["status"] = status.value()
