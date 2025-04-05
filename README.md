@@ -48,9 +48,10 @@ For å starte applikasjonen med Spring Boot, kjør:
     ./gradlew bootRun
 
 Merk:
-Når applikasjonen kjører, starter den Tomcat på port 28852. Siden standardruten på denne porten kanskje ikke viser noe, må du benytte et spesifikt endepunkt. For eksempel:
+Når applikasjonen kjører, starter den Tomcat på port 28852. Siden standardruten på denne porten kanskje ikke viser noe, må du benytte et spesifikt endepunkt. For eksempel for å vise json av tilgjengelige seter:
 
-    http://localhost:28852/seats – for å vise json om tilgjengelige seter.
+    http://localhost:28852/seats   
+
 
 
 
