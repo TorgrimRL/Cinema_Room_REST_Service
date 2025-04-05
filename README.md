@@ -30,7 +30,7 @@ For å klone prosjektet, kjør følgende kommando i terminalen:
 
 ### Navigere til riktig mappe
 
-Etter nedlasting ligger prosjektet i en mappe med navnet Cinema Room REST Service (Kotlin). Alle Gradle-konfigurasjonsfiler og kildekode er plassert i undermappen task. For å bygge og kjøre prosjektet, naviger inn i task-mappen:
+Etter nedlasting ligger prosjektet i en mappe med navnet Cinema Room REST Service (Kotlin). Alle Gradle-konfigurasjonsfiler og kildekode er plassert i undermappen. For å bygge og kjøre prosjektet, naviger inn i task-mappen:
 
     cd "Cinema Room REST Service (Kotlin)"
 
